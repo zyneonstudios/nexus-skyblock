@@ -57,7 +57,6 @@ public class SkyBlock {
         SkyLogger.sendRaw("==========================================================================");
     }
 
-    //haha omega
     public void enable() {
         SkyLogger.sendRaw("==========================================================================");
         sendBigFont();
