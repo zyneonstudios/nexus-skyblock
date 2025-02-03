@@ -1,2 +1,2 @@
 # nexus-skyblock
-SkyBlock pager plugin
+SkyBlock paper plugin
