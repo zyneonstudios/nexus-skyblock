@@ -1,0 +1,32 @@
+name: nexus-skyblock
+version: '3.0.0-alpha.1'
+main: com.zyneonstudios.nexus.Preloader
+api-version: '1.21'
+authors:
+  - nerotvlive
+  - Black_0mega
+  - Zyneon Nexus
+  - Zyneon Projects
+  - Zyneon Studios
+
+commands:
+  broadcast:
+    aliases: [alert]
+  clearchat:
+    aliases: [cc,chatclear]
+  fly:
+  gamemode:
+    aliases: [gm]
+  god:
+  heal:
+  island:
+    aliases: [is,i]
+  kill:
+  money:
+    aliases: [skycoins,balance]
+  ping:
+  speed:
+  vanish:
+    aliases: [v]
+  world:
+    aliases: [map]

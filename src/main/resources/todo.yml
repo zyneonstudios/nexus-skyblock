@@ -1,0 +1,18 @@
+Befehle:
+  - in
+  - visit
+  - money (pay, get, usw.)
+  - settings (Inselname, Chatoptionen (?), Besucher erlauben/verbieten)
+  - weather
+
+Funktionen:
+  - Inselgeneration
+    - Overworld
+    - Nether
+  - Insellöschung
+  - Markt (Kaufen, Verkaufen, usw.)
+  - Geld
+    - Bezahlen
+    - Geld an spieler Zahlen
+    - Momentanen Kontostand anzeigen (Befehlrückgabe / Scoreboard)
+  - Insellevel
