@@ -74,8 +74,8 @@ public class UserStrings {
         language.put("commands.vanish.deactivated", "You aren't §avanished §7anymore§8!");
         language.put("commands.vanish.activated.bypass", "§e%player% §7is now §avanished§8! §7However§8,§7 you can still see him§8,§7 because you got sufficient §epermission§8!");
         language.put("commands.vanish.deactivated.bypass", "§e%player% §7isn't §avanished §7anymore §8!");
-        language.put("commands.god.activated", "You are now $eInvulnerable§8!");
-        language.put("commands.god.deactivated", "You aren't longer $eInvulnerable§8!");
+        language.put("commands.god.activated", "You are now §eInvulnerable§8!");
+        language.put("commands.god.deactivated", "You aren't longer §eInvulnerable§8!");
         language.put("commands.god.activated.other", "§a%player% §7is now $eInvulnerable§8!");
         language.put("commands.god.deactivated.other", "§a%player% §7isn't longer $eInvulnerable§8!");
 
