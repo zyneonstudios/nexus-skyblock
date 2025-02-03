@@ -19,6 +19,8 @@ commands:
     aliases: [gm]
   god:
   heal:
+  invsee:
+    aliases: [inventory]
   island:
     aliases: [is,i]
   kill:

@@ -68,6 +68,7 @@ public class SkyBlock {
         loadCommand(new GamemodeCommand());
         loadCommand(new GodCommand());
         loadCommand(new HealCommand());
+        loadCommand(new InvseeCommand());
         loadCommand(new IslandCommand());
         loadCommand(new KillCommand());
         loadCommand(new MoneyCommand());
