@@ -27,7 +27,7 @@ commands:
   ping:
   speed:
   tell:
-    aliases: [msg]
+    aliases: [whisper]
   vanish:
     aliases: [v]
   world:
