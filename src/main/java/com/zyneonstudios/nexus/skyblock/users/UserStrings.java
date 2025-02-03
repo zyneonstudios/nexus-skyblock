@@ -71,9 +71,10 @@ public class UserStrings {
         language.put("commands.money.pay.other", "§a%player%§7 has transferred you §e%amount% Skycoins§8.");
         language.put("commands.money.pay.insufficient", "§cYou do not have enough Skycoins to complete this transaction§8.");
         language.put("commands.vanish.activated", "You are now §evanished§8!");
-        language.put("commands.vanish.deactivated", "You aren't §avanished §7anymore§8!");
+        language.put("commands.vanish.deactivated", "You aren't §evanished §7anymore§8!");
         language.put("commands.vanish.activated.bypass", "§e%player% §7is now §avanished§8! §7However§8,§7 you can still see him§8,§7 because you got sufficient §epermission§8!");
         language.put("commands.vanish.deactivated.bypass", "§e%player% §7isn't §avanished §7anymore §8!");
+        language.put("commands.vanish.bypass.joined", "Currently§8, §7The following players are §avanished§8: §a");
         language.put("commands.god.activated", "You are now §eInvulnerable§8!");
         language.put("commands.god.deactivated", "You aren't longer §eInvulnerable§8!");
         language.put("commands.god.activated.other", "§a%player% §7is now $eInvulnerable§8!");
@@ -166,6 +167,7 @@ public class UserStrings {
         commands_vanish_deactivated,
         commands_vanish_activated_bypass,
         commands_vanish_deactivated_bypass,
+        commands_vanish_bypass_joined,
         commands_god_activated,
         commands_god_deactivated,
         commands_god_activated_other,
