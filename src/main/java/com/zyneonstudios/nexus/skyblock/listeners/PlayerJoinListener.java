@@ -28,11 +28,11 @@ public class PlayerJoinListener implements Listener {
         } else {
             if (!vanishedPlayers.isEmpty()) {
                 StringBuilder message = new StringBuilder(user.getUserStrings().get(UserStrings.KEY.commands_vanish_bypass_joined));
-                for (int i = 0; i < vanishedPlayers.size(); i++) {
-                    if (i + 1 > vanishedPlayers.size()) {
-                        message.append(vanishedPlayers.get(i).getName()).append("§8.");
+                for (Player vanishedPlayer : vanishedPlayers) {
+                    if (vanishedPlayer == vanishedPlayers.getLast()) {
+                        message.append(vanishedPlayer.getName()).append("§8.");
                     }
-                    message.append(vanishedPlayers.get(i).getName()).append("§8, §a");
+                    message.append(vanishedPlayer.getName()).append("§8, §a");
                 }
                 user.sendMessage(message.toString());
             }
