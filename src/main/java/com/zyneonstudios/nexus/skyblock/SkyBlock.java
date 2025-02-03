@@ -73,6 +73,7 @@ public class SkyBlock {
         loadCommand(new MoneyCommand());
         loadCommand(new PingCommand());
         loadCommand(new SpeedCommand());
+        loadCommand(new TellCommand());
         loadCommand(new VanishCommand());
         loadCommand(new WorldCommand());
         SkyLogger.sendRaw(" ");

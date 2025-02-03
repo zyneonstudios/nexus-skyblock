@@ -26,6 +26,8 @@ commands:
     aliases: [skycoins,balance]
   ping:
   speed:
+  tell:
+    aliases: [msg]
   vanish:
     aliases: [v]
   world:

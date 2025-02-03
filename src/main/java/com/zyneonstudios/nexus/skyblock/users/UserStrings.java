@@ -79,6 +79,8 @@ public class UserStrings {
         language.put("commands.god.deactivated", "You aren't longer §eInvulnerable§8!");
         language.put("commands.god.activated.other", "§a%player% §7is now $eInvulnerable§8!");
         language.put("commands.god.deactivated.other", "§a%player% §7isn't longer $eInvulnerable§8!");
+        language.put("commands.tell.message.from.other", "§bMessage from §a%player% §8» §f");
+        language.put("commands.tell.message.to.other", "§bMessage to §a%player% §8» §f");
 
         language.put("interface.worldCreator.title","Create a world...");
         language.put("interface.worldCreator.generator","§bGenerator");
@@ -172,6 +174,8 @@ public class UserStrings {
         commands_god_deactivated,
         commands_god_activated_other,
         commands_god_deactivated_other,
+        commands_tell_message_from_other,
+        commands_tell_message_to_other,
 
         interface_worldCreator_title,
         interface_worldCreator_generator,
