@@ -21,14 +21,13 @@ public class FlyCommand implements CommandExecutor, TabCompleter {
     private void sendSyntax(@NotNull final CommandSender sender, UserStrings language) {
         String syntax = "/fly (user)";
         if(!(sender instanceof Player)) {
-            syntax.replace("(user)","<user>");
+            syntax = syntax.replace("(user)","<user>");
         }
         SkyLogger.sendError(sender,language.get(UserStrings.KEY.errors_syntax)+syntax);
     }
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String s, @NotNull String @NotNull [] args) {
-
         UserStrings language = SkyBlock.getStrings();
         if (sender instanceof Player player) {
             language = SkyBlock.getUser(player).getUserStrings();

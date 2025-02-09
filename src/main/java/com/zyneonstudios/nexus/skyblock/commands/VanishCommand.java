@@ -54,7 +54,7 @@ public class VanishCommand implements CommandExecutor, TabCompleter {
                             } else if (all.getName().equals(player.getName())) {
                                 SkyLogger.sendMessage(sender, language.get(UserStrings.KEY.commands_vanish_deactivated));
                             } else {
-                                all.showPlayer(player);
+                                all.showEntity(SkyBlock.getInstance(), player);
                             }
                         }
                         return true;
@@ -94,7 +94,7 @@ public class VanishCommand implements CommandExecutor, TabCompleter {
                             } else if (all.getName().equals(target.getName())) {
                                 tuser.sendMessage(tuser.getUserStrings().get(UserStrings.KEY.commands_vanish_deactivated));
                             } else {
-                                all.showPlayer(target);
+                                all.showEntity(SkyBlock.getInstance(), target);
                             }
                         }
                         return true;
