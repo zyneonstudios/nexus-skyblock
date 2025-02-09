@@ -20,6 +20,10 @@ public class VanishCommand implements CommandExecutor, TabCompleter {
 
     public static ArrayList<Player> vP = new ArrayList<>();
 
+    public static ArrayList<Player> getvP() {
+        return vP;
+    }
+
     private void sendSyntax(@NotNull final CommandSender sender, UserStrings language) {
         String syntax = "/vanish (user)";
         if(!(sender instanceof Player)) {
@@ -44,24 +48,26 @@ public class VanishCommand implements CommandExecutor, TabCompleter {
                     if (vP.contains(player)) {
                         vP.remove(player);
                         for (Player all : Bukkit.getOnlinePlayers()) {
-                            all.showPlayer(player);
                             SkyUser user = SkyBlock.getUser(all);
                             if (all.hasPermission("zyneon.skyblock.commands.vanish.bypass") && !all.getName().equals(sender.getName())) {
                                 user.sendMessage(user.getUserStrings().get(UserStrings.KEY.commands_vanish_deactivated_bypass).replace("%player%", player.getName()));
                             } else if (all.getName().equals(player.getName())) {
                                 SkyLogger.sendMessage(sender, language.get(UserStrings.KEY.commands_vanish_deactivated));
+                            } else {
+                                all.showPlayer(player);
                             }
                         }
                         return true;
                     } else {
                         vP.add(player);
                         for (Player all : Bukkit.getOnlinePlayers()) {
-                            all.hidePlayer(player);
                             SkyUser user = SkyBlock.getUser(all);
                             if (all.hasPermission("zyneon.skyblock.commands.vanish.bypass") && !all.getName().equals(sender.getName())) {
                                 user.sendMessage(user.getUserStrings().get(UserStrings.KEY.commands_vanish_activated_bypass).replace("%player%", player.getName()));
                             } else if (all.getName().equals(player.getName())) {
                                 SkyLogger.sendMessage(sender, language.get(UserStrings.KEY.commands_vanish_activated));
+                            } else {
+                                all.hidePlayer(player);
                             }
                         }
                         return true;
@@ -83,11 +89,12 @@ public class VanishCommand implements CommandExecutor, TabCompleter {
                         vP.remove(target);
                         for (Player all : Bukkit.getOnlinePlayers()) {
                             SkyUser user = SkyBlock.getUser(all);
-                            all.showPlayer(target);
                             if (all.hasPermission("zyneon.skyblock.commands.vanish.bypass") && !all.getName().equals(target.getName())) {
                                 user.sendMessage(user.getUserStrings().get(UserStrings.KEY.commands_vanish_deactivated_bypass).replace("%player%", target.getName()));
                             } else if (all.getName().equals(target.getName())) {
                                 tuser.sendMessage(tuser.getUserStrings().get(UserStrings.KEY.commands_vanish_deactivated));
+                            } else {
+                                all.showPlayer(target);
                             }
                         }
                         return true;
@@ -95,11 +102,12 @@ public class VanishCommand implements CommandExecutor, TabCompleter {
                         vP.add(target);
                         for (Player all : Bukkit.getOnlinePlayers()) {
                             SkyUser user = SkyBlock.getUser(all);
-                            all.hidePlayer(target);
                             if (all.hasPermission("zyneon.skyblock.commands.vanish.bypass") && !all.getName().equals(target.getName())) {
                                 user.sendMessage(user.getUserStrings().get(UserStrings.KEY.commands_vanish_activated_bypass).replace("%player%", target.getName()));
                             } else if (all.getName().equals(target.getName())) {
                                 tuser.sendMessage(tuser.getUserStrings().get(UserStrings.KEY.commands_vanish_activated));
+                            } else {
+                                all.hidePlayer(target);
                             }
                         }
                         return true;

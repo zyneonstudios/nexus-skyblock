@@ -71,13 +71,17 @@ public class UserStrings {
         language.put("commands.money.pay.other", "§a%player%§7 has transferred you §e%amount% Skycoins§8.");
         language.put("commands.money.pay.insufficient", "§cYou do not have enough Skycoins to complete this transaction§8.");
         language.put("commands.vanish.activated", "You are now §evanished§8!");
-        language.put("commands.vanish.deactivated", "You aren't §avanished §7anymore§8!");
+        language.put("commands.vanish.deactivated", "You aren't §evanished §7anymore§8!");
         language.put("commands.vanish.activated.bypass", "§e%player% §7is now §avanished§8! §7However§8,§7 you can still see him§8,§7 because you got sufficient §epermission§8!");
         language.put("commands.vanish.deactivated.bypass", "§e%player% §7isn't §avanished §7anymore §8!");
+        language.put("commands.vanish.bypass.joined", "Currently§8, §7The following players are §avanished§8: §a");
         language.put("commands.god.activated", "You are now §eInvulnerable§8!");
         language.put("commands.god.deactivated", "You aren't longer §eInvulnerable§8!");
         language.put("commands.god.activated.other", "§a%player% §7is now $eInvulnerable§8!");
         language.put("commands.god.deactivated.other", "§a%player% §7isn't longer $eInvulnerable§8!");
+        language.put("commands.tell.message.from.other", "§bMessage from §a%player% §8» §f");
+        language.put("commands.tell.message.to.other", "§bMessage to §a%player% §8» §f");
+        language.put("commands.invsee.inv.opened", "Opened Inventory of §a%player%§8!");
 
         language.put("interface.worldCreator.title","Create a world...");
         language.put("interface.worldCreator.generator","§bGenerator");
@@ -89,6 +93,13 @@ public class UserStrings {
         language.put("interface.worldCreator.hardcore","§bHardcore");
         language.put("interface.worldCreator.keepSpawnLoaded","§bKeep spawn loaded");
         language.put("interface.worldCreator.create","§bCreate");
+        language.put("interface.invsee.title","Inventory of %player%");
+        language.put("interface.invsee.hotbarslot","§8Empty §eHotbarslot");
+        language.put("interface.invsee.invslot","§8Empty §eInventoryslot");
+        language.put("interface.invsee.armorslot","§8Empty §eArmorslot");
+        language.put("interface.invsee.shieldslot","§8Empty §eShieldslot");
+        language.put("interface.invsee.slot","§8----------------");
+
     }
 
     public void initLanguage(YamlConfiguration language) {
@@ -166,10 +177,14 @@ public class UserStrings {
         commands_vanish_deactivated,
         commands_vanish_activated_bypass,
         commands_vanish_deactivated_bypass,
+        commands_vanish_bypass_joined,
         commands_god_activated,
         commands_god_deactivated,
         commands_god_activated_other,
         commands_god_deactivated_other,
+        commands_tell_message_from_other,
+        commands_tell_message_to_other,
+        commands_invsee_inv_opened,
 
         interface_worldCreator_title,
         interface_worldCreator_generator,
@@ -181,5 +196,11 @@ public class UserStrings {
         interface_worldCreator_hardcore,
         interface_worldCreator_keepSpawnLoaded,
         interface_worldCreator_create,
+        interface_invsee_title,
+        interface_invsee_hotbarslot,
+        interface_invsee_invslot,
+        interface_invsee_armorslot,
+        interface_invsee_shieldslot,
+        interface_invsee_slot,
     }
 }

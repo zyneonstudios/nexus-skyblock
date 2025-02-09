@@ -19,6 +19,8 @@ commands:
     aliases: [gm]
   god:
   heal:
+  invsee:
+    aliases: [inventory]
   island:
     aliases: [is,i]
   kill:
@@ -26,6 +28,8 @@ commands:
     aliases: [skycoins,balance]
   ping:
   speed:
+  tell:
+    aliases: [whisper]
   vanish:
     aliases: [v]
   world:

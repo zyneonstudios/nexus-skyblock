@@ -68,11 +68,13 @@ public class SkyBlock {
         loadCommand(new GamemodeCommand());
         loadCommand(new GodCommand());
         loadCommand(new HealCommand());
+        loadCommand(new InvseeCommand());
         loadCommand(new IslandCommand());
         loadCommand(new KillCommand());
         loadCommand(new MoneyCommand());
         loadCommand(new PingCommand());
         loadCommand(new SpeedCommand());
+        loadCommand(new TellCommand());
         loadCommand(new VanishCommand());
         loadCommand(new WorldCommand());
         SkyLogger.sendRaw(" ");
