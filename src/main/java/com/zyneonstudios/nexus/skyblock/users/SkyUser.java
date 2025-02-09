@@ -134,6 +134,10 @@ public class SkyUser {
         }
     }
 
+    public UUID getActiveIsland() {
+        return activeIsland;
+    }
+
     private void quit() {
         player = null;
         userStrings = null;

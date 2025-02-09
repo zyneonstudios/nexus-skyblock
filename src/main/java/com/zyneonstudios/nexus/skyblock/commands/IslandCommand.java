@@ -1,6 +1,8 @@
 package com.zyneonstudios.nexus.skyblock.commands;
 
-import com.zyneonstudios.nexus.skyblock.islands.Island;
+import com.zyneonstudios.nexus.skyblock.SkyBlock;
+import com.zyneonstudios.nexus.skyblock.users.SkyUser;
+import com.zyneonstudios.nexus.skyblock.users.UserStrings;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,12 +16,28 @@ import java.util.List;
 
 public class IslandCommand implements CommandExecutor, TabCompleter {
 
+    private void sendSyntax(CommandSender sender, UserStrings language) {
+
+    }
+
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String @NotNull [] args) {
-        if(sender instanceof Player player) {
-            Island island = new Island(player.getUniqueId());
-            island.loadWorld(true);
-            player.teleport(island.getOverworld().getSpawnLocation());
+        UserStrings language = SkyBlock.getStrings();
+        if (sender instanceof Player player) {
+            language = SkyBlock.getUser(player).getUserStrings();
+        }
+
+        if(args.length == 0) {
+            if(sender instanceof Player player) {
+                SkyUser user = SkyBlock.getUser(player);
+                if(user.getActiveIsland()!=null) {
+
+                } else {
+
+                }
+            } else {
+                sendSyntax(sender, language);
+            }
         }
         return false;
     }
