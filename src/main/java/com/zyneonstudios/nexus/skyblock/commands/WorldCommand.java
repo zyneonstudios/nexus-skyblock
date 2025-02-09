@@ -24,9 +24,9 @@ import java.util.List;
 public class WorldCommand implements CommandExecutor, TabCompleter {
 
     private void sendSyntax(@NotNull final CommandSender sender, UserStrings language) {
-        String syntax = "/world (teleport/create/load/info/unload/delete) (world)";
+        String syntax = "/world <load/info/unload/delete> <world>";
         if(sender instanceof Player) {
-            syntax = "/world <load/info/unload/delete> <world>";
+            syntax = "/world (teleport/create/load/info/unload/delete) (world)";
         }
         SkyLogger.sendError(sender,language.get(UserStrings.KEY.errors_syntax)+syntax);
     }

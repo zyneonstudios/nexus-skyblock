@@ -1,5 +1,5 @@
 name: nexus-skyblock
-version: '3.0.0-alpha.1'
+version: '3.0.0-alpha.2'
 main: com.zyneonstudios.nexus.Preloader
 api-version: '1.21'
 authors:
@@ -9,11 +9,16 @@ authors:
   - Zyneon Projects
   - Zyneon Studios
 
+depend:
+  - FastAsyncWorldEdit
+
 commands:
   broadcast:
     aliases: [alert]
   clearchat:
     aliases: [cc,chatclear]
+  enderchest:
+    aliases: [ec]
   fly:
   gamemode:
     aliases: [gm]

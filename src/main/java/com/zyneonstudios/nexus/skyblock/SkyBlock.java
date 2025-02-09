@@ -3,10 +3,7 @@ package com.zyneonstudios.nexus.skyblock;
 import com.zyneonstudios.nexus.Preloader;
 import com.zyneonstudios.nexus.skyblock.commands.*;
 import com.zyneonstudios.nexus.skyblock.islands.Island;
-import com.zyneonstudios.nexus.skyblock.listeners.PlayerChatListener;
-import com.zyneonstudios.nexus.skyblock.listeners.PlayerInventoryListener;
-import com.zyneonstudios.nexus.skyblock.listeners.PlayerJoinListener;
-import com.zyneonstudios.nexus.skyblock.listeners.PlayerQuitListener;
+import com.zyneonstudios.nexus.skyblock.listeners.*;
 import com.zyneonstudios.nexus.skyblock.managers.InterfaceManager;
 import com.zyneonstudios.nexus.skyblock.storage.Storage;
 import com.zyneonstudios.nexus.skyblock.users.SkyUser;
@@ -64,6 +61,7 @@ public class SkyBlock {
         SkyLogger.sendRaw("  ● Loading commands...");
         loadCommand(new BroadcastCommand());
         loadCommand(new ClearchatCommand());
+        loadCommand(new EnderchestCommand());
         loadCommand(new FlyCommand());
         loadCommand(new GamemodeCommand());
         loadCommand(new GodCommand());
@@ -79,7 +77,9 @@ public class SkyBlock {
         loadCommand(new WorldCommand());
         SkyLogger.sendRaw(" ");
         SkyLogger.sendRaw("  ● Loading listeners...");
+        registerEvents(new BlockFormListener());
         registerEvents(new PlayerChatListener());
+        registerEvents(new PlayerDeathListener());
         registerEvents(new PlayerInventoryListener());
         registerEvents(new PlayerJoinListener());
         registerEvents(new PlayerQuitListener());
@@ -88,6 +88,8 @@ public class SkyBlock {
         SkyLogger.sendRaw(" ");
         SkyLogger.sendRaw(" ");
         SkyLogger.sendRaw(" ");
+
+        System.gc();
     }
 
     private void loadCommand(CommandExecutor command) {
@@ -110,6 +112,9 @@ public class SkyBlock {
         SkyLogger.sendRaw("==========================================================================");
         sendBigFont();
         SkyLogger.sendRaw(" ");
+        for(SkyUser user : users.values()) {
+            user.disconnect();
+        }
         SkyLogger.sendRaw("==========================================================================");
     }
 

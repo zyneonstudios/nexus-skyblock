@@ -21,7 +21,7 @@ public class GodCommand implements CommandExecutor, TabCompleter {
     private void sendSyntax(@NotNull final CommandSender sender, UserStrings language) {
         String syntax = "/god (user)";
         if(!(sender instanceof Player)) {
-            syntax.replace("(user)","<user>");
+            syntax = syntax.replace("(user)","<user>");
         }
         SkyLogger.sendError(sender,language.get(UserStrings.KEY.errors_syntax)+syntax);
     }

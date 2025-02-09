@@ -3,6 +3,7 @@ package com.zyneonstudios.nexus.skyblock.users;
 import com.zyneonstudios.nexus.skyblock.SkyBlock;
 import com.zyneonstudios.nexus.skyblock.managers.WorldManager;
 import com.zyneonstudios.nexus.skyblock.utilities.SkyLogger;
+import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 
@@ -16,7 +17,7 @@ public class SkyUser {
     private UUID uuid;
     private WorldManager.WorldCreator creator = null;
     private String inputMode = null;
-    private Double skycoins;
+    private double skycoins;
     private UUID activeIsland = null;
 
     public SkyUser(Player player) {
@@ -138,7 +139,21 @@ public class SkyUser {
         return activeIsland;
     }
 
+    public void setActiveIsland(UUID activeIsland) {
+        SkyBlock.getStorage().set("users."+uuid+".island",activeIsland);
+        this.activeIsland = activeIsland;
+    }
+
     private void quit() {
+        Location loc = player.getLocation();
+        SkyBlock.getStorage().set("users."+uuid+".lastLoc.saved", false);
+        SkyBlock.getStorage().set("users."+uuid+".lastLoc.X", loc.getX());
+        SkyBlock.getStorage().set("users."+uuid+".lastLoc.Y", loc.getY());
+        SkyBlock.getStorage().set("users."+uuid+".lastLoc.Z", loc.getZ());
+        SkyBlock.getStorage().set("users."+uuid+".lastLoc.yaw", loc.getYaw());
+        SkyBlock.getStorage().set("users."+uuid+".lastLoc.pitch", loc.getPitch());
+        SkyBlock.getStorage().set("users."+uuid+".lastLoc.world", loc.getWorld().getName());
+        SkyBlock.getStorage().set("users."+uuid+".lastLoc.saved", true);
         player = null;
         userStrings = null;
         name = null;

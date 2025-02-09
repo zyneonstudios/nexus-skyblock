@@ -19,10 +19,8 @@ import java.util.List;
 public class TellCommand implements CommandExecutor, TabCompleter {
 
     private void sendSyntax(@NotNull final CommandSender sender, UserStrings language) {
-
         String syntax = "/msg <user> <message>";
         SkyLogger.sendError(sender,language.get(UserStrings.KEY.errors_syntax)+syntax);
-
     }
 
     @Override

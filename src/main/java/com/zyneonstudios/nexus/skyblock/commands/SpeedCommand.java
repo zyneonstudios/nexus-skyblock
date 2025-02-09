@@ -21,7 +21,7 @@ public class SpeedCommand implements CommandExecutor, TabCompleter {
     private void sendSyntax(CommandSender sender, UserStrings language) {
         String syntax = "/speed <0-9/d/default> (user)";
         if (!(sender instanceof Player player)) {
-            syntax.replace("(user)", "<user>");
+            syntax = syntax.replace("(user)", "<user>");
         }
         SkyLogger.sendError(sender, language.get(UserStrings.KEY.errors_syntax) + syntax);
     }

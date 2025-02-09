@@ -20,7 +20,7 @@ public class KillCommand implements CommandExecutor, TabCompleter {
     private void sendSyntax(CommandSender sender, UserStrings language) {
         String syntax = "/kill (user)";
         if (!(sender instanceof Player player)) {
-            syntax.replace("(user)", "<user>");
+            syntax = syntax.replace("(user)", "<user>");
         }
         SkyLogger.sendError(sender, language.get(UserStrings.KEY.errors_syntax) + syntax);
     }

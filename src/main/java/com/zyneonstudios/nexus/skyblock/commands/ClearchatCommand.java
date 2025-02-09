@@ -14,7 +14,6 @@ public class ClearchatCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String s, @NotNull String @NotNull [] args) {
-
         UserStrings language = SkyBlock.getStrings();
         if (sender instanceof Player player) {
             language = SkyBlock.getUser(player).getUserStrings();
